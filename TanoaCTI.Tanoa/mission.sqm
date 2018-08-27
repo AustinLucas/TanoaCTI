@@ -1,0 +1,168 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=5;
+	};
+	class Camera
+	{
+		pos[]={7767.8955,112.67381,12519.188};
+		dir[]={0.94110632,-0.33581474,0.039738242};
+		up[]={0.33552718,0.94192123,0.014168401};
+		aside[]={0.042188633,5.5733835e-008,-0.99912637};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Weapons_F_Ammoboxes",
+	"A3_Supplies_F_Exp_Ammoboxes"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=3;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Supplies_F_Exp";
+			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=7627038;
+class ScenarioData
+{
+	author="-LPIW-THEMASTERNOOB";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=250;
+		forecastFogBase=250;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=4;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7753.6392,108.80827,12522.268};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7775.2642,109.47973,12521.94};
+				angles[]={0.018657569,0,0.090425514};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="_gearbox2";
+			};
+			id=2;
+			type="Box_IND_Ammo_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7775.5991,109.67997,12519.672};
+				angles[]={0.037315138,0,0.090425514};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="_Gearbox1";
+			};
+			id=3;
+			type="Box_AAF_Equip_F";
+			atlOffset=-7.6293945e-006;
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7774.9146,109.38657,12524.807};
+				angles[]={0.026668631,0,0.08248426};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="_gearbox3";
+			};
+			id=4;
+			type="Box_IND_AmmoOrd_F";
+		};
+	};
+};
