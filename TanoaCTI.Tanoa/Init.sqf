@@ -1,4 +1,4 @@
-hint "starting!";
+/*hint "starting!";
 _ClientID = clientOwner;
 _PlayerUID = getPlayerUID player;
 _PlayerName = name player;
@@ -14,3 +14,11 @@ player addAction ["save data",
   saveData = [_gear, _PlayerUID, _playerPosition];
   publicVariableServer "saveData";
 }];
+*/
+
+_ClientID = clientOwner;
+_PlayerUID = getPlayerUID player;
+_PlayerName = Name player;
+
+checkForDB = [_ClientID, _PlayerUID, _PlayerName];
+publicVariableServer "checkForDB";

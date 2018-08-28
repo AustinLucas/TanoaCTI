@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7767.8955,112.67381,12519.188};
-		dir[]={0.94110632,-0.33581474,0.039738242};
-		up[]={0.33552718,0.94192123,0.014168401};
-		aside[]={0.042188633,5.5733835e-008,-0.99912637};
+		pos[]={7744.3936,124.15529,12510.683};
+		dir[]={0.73928338,-0.34158412,0.58036011};
+		up[]={0.26869261,0.93984455,0.21093279};
+		aside[]={0.6175009,1.0454096e-007,-0.78659397};
 	};
 };
 binarizationWanted=0;
@@ -124,7 +124,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				name="_gearbox2";
+				name="gearbox2";
 			};
 			id=2;
 			type="Box_IND_Ammo_F";
@@ -141,7 +141,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				name="_Gearbox1";
+				name="Gearbox1";
 			};
 			id=3;
 			type="Box_AAF_Equip_F";
@@ -159,7 +159,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				name="_gearbox3";
+				name="gearbox3";
 			};
 			id=4;
 			type="Box_IND_AmmoOrd_F";

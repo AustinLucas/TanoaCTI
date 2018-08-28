@@ -1,4 +1,4 @@
-_Serverinidbi1 = ["new", "ServerDB"] call OO_INIDBI;
+/*_Serverinidbi1 = ["new", "ServerDB"] call OO_INIDBI;
 _serverDBExists = "exists" call _Serverinidbi1;
 if (_serverDBExists) then
 {
@@ -49,4 +49,66 @@ else
   };
   _inidbi = ["new", _PlayerUID] call OO_INIDBI;
   ["write", ["Player Gear", "Gear", _gear], ["Player Position", "Position", _playerPosition]] call _inidbi;
+};
+*/
+
+checkForServerDB = [clientOwner, "ServerDB", serverName];
+publicVariableServer "checkForServerDB";
+
+"checkForServerDB" addPublicVariableEventHandler
+{
+  _data = _this select 1; //Grabs array broadcast across network
+  _ID = _data select 0;   //
+  _UID = _data select 1;  // Splits array into its parts
+  _Name = _data select 2; //
+  _inidbi = ["new", _UID] call OO_INIDBI;
+  _DBExists = "exists" call _inidbi;
+
+  if (_DBExists) then
+  {
+    //hint _Name + " Database exists... Reading";
+    player sideChat _Name + " Database exists... Reading";
+  }
+  else
+  {
+    player sideChat _Name + " Database does NOT exist... Creating!";
+    null = [_UID, _Name] execVM "CreateDatabase.sqf";
+  };
+};
+"checkForDB" addPublicVariableEventHandler //function Check for Database
+{
+  _data = _this select 1; //Grabs array broadcast across network
+  _ID = _data select 0;   //
+  _UID = _data select 1;  // Splits array into its parts
+  _Name = _data select 2; //
+  _inidbi = ["new", _UID] call OO_INIDBI;
+  _DBExists = "exists" call _inidbi;
+
+  if (_DBExists) then
+  {
+    //hint _Name + " Database exists... Reading";
+    player sideChat _Name + " Database exists... Reading";
+  }
+  else
+  {
+    player sideChat _Name + " Database does NOT exist... Creating!";
+    null = [_UID, _Name] execVM "CreateDatabase.sqf";
+  };
+};
+
+onPlayerDisconnected
+{
+  _playercount = count allPlayers;
+    if (_playercount == 0) then
+    {
+      _dataToSave = "test";
+
+      null = ["ServerDB", _dataToSave] execVM "saveData.sqf";
+      {
+        null = [getPlayerUID _x, _dataToSave] execVM "saveData.sqf";
+        player sideChat "Player " + Name _x + " has left. Their data has been saved.";
+      }
+      foreach allPlayers;
+      endMission;
+    };
 };
