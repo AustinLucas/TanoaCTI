@@ -47,7 +47,7 @@ publicVariableServer "checkForServerDB";
   };
 };
 
-player addAction["Save Data",
+BaseMap addAction["Save Data",
 {
   _players = allPlayers - entities "HeadlessClient_f";
   _playercount = count _players;
@@ -61,4 +61,18 @@ player addAction["Save Data",
       }
       foreach allPlayers;
 
+}];
+
+BaseMap addAction["Capture RadioStation", {
+  _Active = true;
+  (RadioCoverage select 0) set [1, true];
+}];
+
+BaseMap addAction["Disable RadioCoverage in Map", 
+{
+    null = ["Disable"] execVM "RadioSystem\changeRadio.sqf";
+}];
+BaseMap addAction["Enable RadioCoverage in Map",
+{
+    null = ["Enable"] execVM "RadioSystem\changeRadio.sqf";
 }];

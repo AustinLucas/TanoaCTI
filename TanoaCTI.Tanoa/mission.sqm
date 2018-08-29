@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=31;
+		nextID=33;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11112.943,262.13861,3706.1392};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={7763.9971,114.20447,12516.866};
+		dir[]={0.87658632,-0.46903467,0.10788218};
+		up[]={0.46554753,0.88316214,0.057294987};
+		aside[]={0.12215168,1.8262654e-007,-0.99252504};
 	};
 };
 binarizationWanted=0;
@@ -28,13 +28,14 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Supplies_F_Exp_Ammoboxes",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Props_F_Argo_Civilian_InfoBoards"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -60,6 +61,13 @@ class AddonsMetaData
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Props_F_Argo";
+			name="Arma 3 Malden - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -94,7 +102,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=30;
+		items=31;
 		class Item0
 		{
 			dataType="Group";
@@ -193,6 +201,7 @@ class Mission
 			name="RadioTower71Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=6;
@@ -213,6 +222,7 @@ class Mission
 			name="RadioTower206Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=8;
@@ -234,6 +244,7 @@ class Mission
 			name="RadioTowerGeorgeTownCoverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=752;
 			b=2500;
 			angle=18.835997;
@@ -256,6 +267,7 @@ class Mission
 			name="CommsAlphaCoverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=3000;
 			b=1763.333;
 			angle=9.3993502;
@@ -269,6 +281,7 @@ class Mission
 			name="CommsBravoCoverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=1838.5669;
 			b=3606.7212;
 			angle=4.3980527;
@@ -301,6 +314,7 @@ class Mission
 			name="RadioTower204Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=16;
@@ -313,6 +327,7 @@ class Mission
 			name="RadioTower183Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=17;
@@ -339,14 +354,15 @@ class Mission
 		class Item19
 		{
 			dataType="Marker";
-			position[]={11009.042,179.04004,4211.2417};
+			position[]={11009.042,179.03999,4211.2422};
 			name="RadioTower167Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=20;
-			atlOffset=-3.4699554;
+			atlOffset=-3.4700012;
 		};
 		class Item20
 		{
@@ -364,6 +380,7 @@ class Mission
 			name="RadioTower89Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=22;
@@ -386,6 +403,7 @@ class Mission
 			name="RadioTower220Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=24;
@@ -408,6 +426,7 @@ class Mission
 			name="RadioTower80Coverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=26;
@@ -430,6 +449,7 @@ class Mission
 			name="CommsWhiskyCoverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=28;
@@ -452,10 +472,28 @@ class Mission
 			name="RadioTowerGSMCoverage";
 			markerType="ELLIPSE";
 			type="ellipse";
+			alpha=0;
 			a=2500;
 			b=2500;
 			id=30;
 			atlOffset=-3.4432983;
+		};
+		class Item30
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7774.2026,110.20032,12518.729};
+				angles[]={0.047963165,1.8030216,0.079830915};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="BaseMap";
+			};
+			id=32;
+			type="MapBoard_Tanoa_F";
 		};
 	};
 };

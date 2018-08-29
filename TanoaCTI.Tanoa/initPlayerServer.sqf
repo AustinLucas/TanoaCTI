@@ -48,8 +48,3 @@ player addAction["Radio NATO", {
     };
   };
 }];
-
-player addAction["Capture RadioStation", {
-  _Active = true;
-  (RadioCoverage select 0) set [1, true];
-}];
