@@ -20,5 +20,5 @@ _ClientID = clientOwner;
 _PlayerUID = getPlayerUID player;
 _PlayerName = Name player;
 
-checkForDB = [_ClientID, _PlayerUID, _PlayerName];
+checkForDB = [_ClientID, _PlayerUID, _PlayerName, player];
 publicVariableServer "checkForDB";

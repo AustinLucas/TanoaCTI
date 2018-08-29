@@ -81,6 +81,7 @@ publicVariableServer "checkForServerDB";
   _ID = _data select 0;   //
   _UID = _data select 1;  // Splits array into its parts
   _Name = _data select 2; //
+  _player = _data select 3;
   _inidbi = ["new", _UID] call OO_INIDBI;
   _DBExists = "exists" call _inidbi;
 
@@ -88,6 +89,7 @@ publicVariableServer "checkForServerDB";
   {
     //hint _Name + " Database exists... Reading";
     player sideChat _Name + " Database exists... Reading";
+    null = [_UID, _player] execVM "getData.sqf";
   }
   else
   {
@@ -96,19 +98,19 @@ publicVariableServer "checkForServerDB";
   };
 };
 
-onPlayerDisconnected
+player addAction["Save Data",
 {
-  _playercount = count allPlayers;
-    if (_playercount == 0) then
-    {
-      _dataToSave = "test";
+  _players = allPlayers - entities "HeadlessClient_f";
+  _playercount = count _players;
 
-      null = ["ServerDB", _dataToSave] execVM "saveData.sqf";
+      //_dataToSave = allMissionObjects "All";
+      //systemChat str _dataToSave;
+     //null = ["ServerDB", _dataToSave] execVM "saveData.sqf";
       {
-        null = [getPlayerUID _x, _dataToSave] execVM "saveData.sqf";
         player sideChat "Player " + Name _x + " has left. Their data has been saved.";
+        _dataToSave = [getPosATL _x, getUnitLoadout _x];
+        null = [getPlayerUID _x, _dataToSave] execVM "saveData.sqf";
       }
       foreach allPlayers;
-      endMission;
-    };
-};
+
+}];
