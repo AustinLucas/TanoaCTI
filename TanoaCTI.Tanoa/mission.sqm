@@ -8,14 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=5;
+		nextID=31;
+	};
+	class MarkerIDProvider
+	{
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={7768.8506,112.3644,12527.304};
-		dir[]={0.83757848,-0.26730996,-0.47650272};
-		up[]={0.23235834,0.96360242,-0.13218929};
-		aside[]={-0.49449676,1.0366784e-007,-0.86920732};
+		pos[]={11112.943,262.13861,3706.1392};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -23,13 +27,14 @@ addons[]=
 {
 	"A3_Characters_F",
 	"A3_Weapons_F_Ammoboxes",
-	"A3_Supplies_F_Exp_Ammoboxes"
+	"A3_Supplies_F_Exp_Ammoboxes",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -48,6 +53,13 @@ class AddonsMetaData
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -82,7 +94,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4;
+		items=30;
 		class Item0
 		{
 			dataType="Group";
@@ -163,6 +175,287 @@ class Mission
 			};
 			id=4;
 			type="Box_IND_AmmoOrd_F";
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={6620.0142,66.793999,7851.6919};
+			name="RadioTower71";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=5;
+			atlOffset=-0.00010681152;
+		};
+		class Item5
+		{
+			dataType="Marker";
+			position[]={6614.4409,66.962418,7853.7451};
+			name="RadioTower71Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=6;
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={7487.4839,205.46001,9652.667};
+			name="RadioTower206";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=7;
+		};
+		class Item7
+		{
+			dataType="Marker";
+			position[]={7487.3516,204.43799,9653.1387};
+			name="RadioTower206Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=8;
+			atlOffset=-1.0220184;
+		};
+		class Item8
+		{
+			dataType="Marker";
+			position[]={6005.5,62.220001,10420.739};
+			name="RadioTowerGeorgeTown";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=9;
+		};
+		class Item9
+		{
+			dataType="Marker";
+			position[]={6164.4912,59.209,11201.927};
+			name="RadioTowerGeorgeTownCoverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=752;
+			b=2500;
+			angle=18.835997;
+			id=10;
+			atlOffset=51.391636;
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={10045.777,409.87,11768.16};
+			name="CommsAlpha";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=11;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={9724.1826,408.97699,12258.089};
+			name="CommsAlphaCoverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=3000;
+			b=1763.333;
+			angle=9.3993502;
+			id=12;
+			atlOffset=42.019257;
+		};
+		class Item12
+		{
+			dataType="Marker";
+			position[]={10366.036,349.50101,8882.4482};
+			name="CommsBravoCoverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=1838.5669;
+			b=3606.7212;
+			angle=4.3980527;
+			id=13;
+			atlOffset=75.681366;
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={11055.254,350.38,11492.884};
+			name="CommsBravo";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=14;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={13781.726,203.384,10977.511};
+			name="RadioTower204";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=15;
+			atlOffset=-0.00025939941;
+		};
+		class Item15
+		{
+			dataType="Marker";
+			position[]={13781.593,200.31599,10977.982};
+			name="RadioTower204Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=16;
+			atlOffset=-3.1407776;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={12888.67,183.04218,8577.7383};
+			name="RadioTower183Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=17;
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={12888.803,184.57201,8577.2666};
+			name="RadioTower183";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=18;
+			atlOffset=1.5500488;
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={11008.868,182.50999,4210.9951};
+			name="RadioTower167";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=19;
+		};
+		class Item19
+		{
+			dataType="Marker";
+			position[]={11009.042,179.04004,4211.2417};
+			name="RadioTower167Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=20;
+			atlOffset=-3.4699554;
+		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={4702.8203,88.779388,3164.1287};
+			name="RadioTower89";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=21;
+		};
+		class Item21
+		{
+			dataType="Marker";
+			position[]={4702.833,85.160004,3163.4971};
+			name="RadioTower89Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=22;
+			atlOffset=-3.5883026;
+		};
+		class Item22
+		{
+			dataType="Marker";
+			position[]={2682.4829,216.476,2592.3391};
+			name="RadioTower220";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=23;
+			atlOffset=-0.97399902;
+		};
+		class Item23
+		{
+			dataType="Marker";
+			position[]={2681.99,213.769,2594.0149};
+			name="RadioTower220Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=24;
+			atlOffset=-3.6809998;
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={2436.7759,71.656998,7222.6128};
+			name="RadioTower80";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=25;
+			atlOffset=-0.63817596;
+		};
+		class Item25
+		{
+			dataType="Marker";
+			position[]={2436.9299,67.987999,7223.1812};
+			name="RadioTower80Coverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=26;
+			atlOffset=-4.3340836;
+		};
+		class Item26
+		{
+			dataType="Marker";
+			position[]={2694.9309,169.77901,12325.826};
+			name="CommsWhisky";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=27;
+			atlOffset=0.00018310547;
+		};
+		class Item27
+		{
+			dataType="Marker";
+			position[]={2689.3579,166.438,12327.879};
+			name="CommsWhiskyCoverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=28;
+			atlOffset=-3.4433746;
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={2970.7439,132.299,13096.59};
+			name="RadioTowerGSM";
+			type="loc_Transmitter";
+			colorName="ColorRed";
+			id=29;
+			atlOffset=0.00012207031;
+		};
+		class Item29
+		{
+			dataType="Marker";
+			position[]={2965.1721,128.873,13098.645};
+			name="RadioTowerGSMCoverage";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=2500;
+			b=2500;
+			id=30;
+			atlOffset=-3.4432983;
 		};
 	};
 };

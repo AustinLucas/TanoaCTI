@@ -5,14 +5,9 @@
 
   if (_UID == "ServerDB") then
   {
-  /*  _z = 0;
     {
-        ["write",["Data", "Box" + str _z + "Contents", getItemCargo _x]] call _inidbi;
-        ["write",["Data", "Box" + str _z + "Position", getPosATL _x]] call _inidbi;
-        _z = _z + 1;
-        systemChat ("Box " + str _z + "Has been saved to Server Data");
-    } forEach _data;
-*/
+        ["write", ["RadioTowers", str(_x select 2), _x select 1]] call _inidbi;
+    }foreach RadioCoverage;
   }
   else
   {
