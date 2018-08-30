@@ -68,11 +68,23 @@ BaseMap addAction["Capture RadioStation", {
   (RadioCoverage select 0) set [1, true];
 }];
 
-BaseMap addAction["Disable RadioCoverage in Map", 
+BaseMap addAction["Disable RadioCoverage in Map",
 {
-    null = ["Disable"] execVM "RadioSystem\changeRadio.sqf";
+  Disable = ["1"];
+  publicVariableServer "Disable";
 }];
 BaseMap addAction["Enable RadioCoverage in Map",
 {
-    null = ["Enable"] execVM "RadioSystem\changeRadio.sqf";
+  Enable = ["1"];
+  publicVariableServer "Enable";
+}];
+
+RadioTower206Gen1 ["Turn on generator",
+{
+  
+]};
+
+RadioTower206Gen2 ["Turn on generator",
+{
+
 }];
