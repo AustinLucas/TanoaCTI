@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=39;
+		nextID=40;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7493.3389,208.09885,9642.707};
-		dir[]={0.83136767,-0.49649653,0.24984546};
-		up[]={0.47550255,0.86802161,0.14290036};
-		aside[]={0.2878263,-1.4542602e-006,-0.95773411};
+		pos[]={7493.8306,209.99693,9661.166};
+		dir[]={-0.5140509,-0.35976171,-0.77880156};
+		up[]={-0.19820796,0.93301892,-0.30029345};
+		aside[]={-0.83467817,-9.2704431e-007,0.55092531};
 	};
 };
 binarizationWanted=0;
@@ -33,13 +33,14 @@ addons[]=
 	"A3_Structures_F_Ind_WindPowerPlant",
 	"A3_Structures_F_Furniture",
 	"A3_Structures_F_EPC_Items_Electronics",
-	"A3_Structures_F_Items_Electronics"
+	"A3_Structures_F_Items_Electronics",
+	"A3_Structures_F_Exp_Civilian_Sheds"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -93,6 +94,13 @@ class AddonsMetaData
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Structures_F_Exp_Civilian";
+			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -525,18 +533,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7496.1182,206.44853,9643.376};
-				angles[]={0,3.9077399,0};
+				position[]={7487.8198,206.28954,9653.458};
+				angles[]={6.2818065,5.4841213,0.0013788101};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				name="RadioTower206Gen1";
+				init="RadioTower206GenOn = false;";
+				name="RadioTower206Gen";
 			};
 			id=33;
 			type="Land_PowerGenerator_F";
-			atlOffset=0.19299316;
+			atlOffset=1.5258789e-005;
 		};
 		class Item32
 		{
@@ -544,7 +553,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7494.3799,206.06029,9645.5488};
-				angles[]={-0,2.3606324,0};
+				angles[]={0,2.3606324,0};
 			};
 			side="Empty";
 			flags=4;
@@ -575,32 +584,35 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7494.1455,206.63203,9645.7275};
-				angles[]={-0,2.2950463,0};
+				position[]={7494.146,206.63208,9645.7275};
+				angles[]={0,2.2950382,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="RadioTower206ComputerOn = false;";
+				name="RadioTower206Computer";
 			};
 			id=36;
 			type="Land_Laptop_unfolded_F";
+			atlOffset=4.5776367e-005;
 		};
 		class Item35
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7489.1138,227.90718,9651.8018};
+				position[]={7489.2563,206.34216,9654.8242};
+				angles[]={0,3.9219179,0};
 			};
 			side="Empty";
+			flags=5;
 			class Attributes
 			{
-				name="RadioTower206Gen2";
 			};
-			id=38;
-			type="Land_Portable_generator_F";
-			atlOffset=22.087997;
+			id=39;
+			type="Land_Shed_02_F";
 		};
 	};
 };

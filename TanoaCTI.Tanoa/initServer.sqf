@@ -79,12 +79,30 @@ BaseMap addAction["Enable RadioCoverage in Map",
   publicVariableServer "Enable";
 }];
 
-RadioTower206Gen1 ["Turn on generator",
 {
-  
-]};
+  _Gen = (str(_x select 2) + "Gen");
+  _GenBol = (_Gen + "On");
+  _Comp = (str(_x select 2) + "Computer");
+  _CompBol = (_Comp + "On");
+  _Gen ["Turn on generator",
+  {
+    _GenBol = true;
+    if (_CompBol && _GenBol) then {
+        null = [(str(_x select 2))]execVM "RadioSystem\CaptureRadio.sqf";
+    };
+  ]};
+  _Comp ["Enable Radio Tower", {
+    _CompBol = true;
+    if (_CompBol && _GenBol) then
+    {
+      null = [(str(_x select 2))]execVM "RadioSystem\CaptureRadio.sqf";
+    };
+  }];
 
-RadioTower206Gen2 ["Turn on generator",
+} forEach RadioCoverage;
+
+
+RadioTower206Computer ["Turn on generator",
 {
 
 }];
