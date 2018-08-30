@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=116;
+		nextID=117;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={2730.0505,303.95721,12204.214};
-		dir[]={0.28992635,-0.42181495,-0.85908532};
-		up[]={0.13488361,0.90667993,-0.39967746};
-		aside[]={-0.94750488,-3.96627e-007,-0.31976563};
+		pos[]={13111.089,136.14384,6194.7856};
+		dir[]={-0.2227525,-0.27424759,-0.93563336};
+		up[]={-0.063521221,0.9616763,-0.26681346};
+		aside[]={-0.9729467,-1.0652875e-006,0.23163882};
 	};
 };
 binarizationWanted=0;
@@ -37,9 +37,9 @@ addons[]=
 	"A3_Structures_F_Items_Electronics",
 	"A3_Structures_F_Ind_WindPowerPlant",
 	"A3_Ui_F",
-	"A3_Characters_F_Jets",
 	"b52_loot",
-	"b52_random_vehicles"
+	"b52_random_vehicles",
+	"A3_Boat_F_Jets_Carrier_01"
 };
 class AddonsMetaData
 {
@@ -97,22 +97,22 @@ class AddonsMetaData
 		};
 		class Item7
 		{
-			className="A3_Characters_F_Jets";
-			name="Arma 3 Jets - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item8
-		{
 			className="B52_Loot";
 			name="Badca52's Loot System";
 			author="Badca52";
 		};
-		class Item9
+		class Item8
 		{
 			className="B52_Random_Vehicles";
 			name="Badca52's Random Vehicles";
 			author="Badca52";
+		};
+		class Item9
+		{
+			className="A3_Boat_F_Jets";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -158,22 +158,24 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7482.8438,205.46144,9648.2949};
+						position[]={13068.134,24.181364,6030.6997};
 					};
 					side="West";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						isPlayer=1;
 					};
 					id=1;
 					type="B_Soldier_F";
+					atlOffset=0.64157295;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=0;
+			atlOffset=0.64157295;
 		};
 		class Item1
 		{
@@ -1716,34 +1718,6 @@ class Mission
 		};
 		class Item3
 		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7490.5146,205.46144,9639.6973};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=113;
-					type="O_Fighter_Pilot_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=112;
-		};
-		class Item4
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -1794,7 +1768,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item5
+		class Item4
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2036,6 +2010,22 @@ class Mission
 				};
 				nAttributes=12;
 			};
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13066.092,0,6032.9233};
+				angles[]={0,3.7076354,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=116;
+			type="Land_Carrier_01_base_F";
+			atlOffset=21.647587;
 		};
 	};
 };
