@@ -10,6 +10,7 @@ if (_PlayerUID == "ServerDB") then
   _inidbi = ["new", _PlayerUID] call OO_INIDBI;
   ["write", ["Server info", "Server Name", _PlayerName]] call _inidbi;
   ["write", ["Server info", "UID", _PlayerUID]] call _inidbi;
+  //null = [_PlayerUID,[getPosATL player, getUnitLoadout player]] execVM "INIDBI\saveData.sqf";
   _inidbi = null;
 }
 else
@@ -17,5 +18,6 @@ else
   _inidbi = ["new", _PlayerUID] call OO_INIDBI;
   ["write", ["Player info", "Name", _PlayerName]] call _inidbi;
   ["write", ["Player info", "UID", _PlayerUID]] call _inidbi;
+  null = [_PlayerUID,[getPosATL player, getUnitLoadout player]] execVM "INIDBI\saveData.sqf";
   _inidbi = null;
 };

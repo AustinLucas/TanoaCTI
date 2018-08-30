@@ -1,8 +1,9 @@
 _capturedRadio = _this select 0;
+systemChat _capturedRadio;
 {
-    if ((str(_x select 2)) == _capturedRadio) then
+    if ((_x select 2) == _capturedRadio) then
     {
       _x set [1, true];
-      execVM "changeRadio.sqf";
+      execVM "RadioSystem\changeRadio.sqf";
     };
 } forEach RadioCoverage;

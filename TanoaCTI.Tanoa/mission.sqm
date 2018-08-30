@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=40;
+		nextID=95;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,16 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7493.8306,209.99693,9661.166};
-		dir[]={-0.5140509,-0.35976171,-0.77880156};
-		up[]={-0.19820796,0.93301892,-0.30029345};
-		aside[]={-0.83467817,-9.2704431e-007,0.55092531};
+		pos[]={11024.785,184.59053,4211.6626};
+		dir[]={-0.87884521,-0.26169628,0.39901856};
+		up[]={-0.23830491,0.9651404,0.10819745};
+		aside[]={0.41342753,-3.1130912e-007,0.91058171};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Characters_F",
-	"A3_Weapons_F_Ammoboxes",
-	"A3_Supplies_F_Exp_Ammoboxes",
 	"A3_Ui_F",
 	"A3_Props_F_Argo_Civilian_InfoBoards",
 	"A3_Structures_F_Ind_WindPowerPlant",
@@ -40,7 +38,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=7;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -50,54 +48,40 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item2
-		{
-			className="A3_Supplies_F_Exp";
-			name="Arma 3 Apex - Ammoboxes and Supplies";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item3
-		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item2
 		{
 			className="A3_Props_F_Argo";
 			name="Arma 3 Malden - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item3
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item4
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item5
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item6
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
@@ -135,7 +119,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=36;
+		items=87;
 		class Item0
 		{
 			dataType="Group";
@@ -167,58 +151,6 @@ class Mission
 		};
 		class Item1
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7775.2642,109.47973,12521.94};
-				angles[]={0.018657569,0,0.090425514};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="gearbox2";
-			};
-			id=2;
-			type="Box_IND_Ammo_F";
-		};
-		class Item2
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7775.5991,109.67997,12519.672};
-				angles[]={0.037315138,0,0.090425514};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="Gearbox1";
-			};
-			id=3;
-			type="Box_AAF_Equip_F";
-			atlOffset=-7.6293945e-006;
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7774.9146,109.38657,12524.807};
-				angles[]={0.026668631,0,0.08248426};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="gearbox3";
-			};
-			id=4;
-			type="Box_IND_AmmoOrd_F";
-		};
-		class Item4
-		{
 			dataType="Marker";
 			position[]={6620.0142,66.793999,7851.6919};
 			name="RadioTower71";
@@ -227,7 +159,7 @@ class Mission
 			id=5;
 			atlOffset=-0.00010681152;
 		};
-		class Item5
+		class Item2
 		{
 			dataType="Marker";
 			position[]={6614.4409,66.962418,7853.7451};
@@ -239,7 +171,7 @@ class Mission
 			b=2500;
 			id=6;
 		};
-		class Item6
+		class Item3
 		{
 			dataType="Marker";
 			position[]={7487.4839,205.46001,9652.667};
@@ -248,7 +180,7 @@ class Mission
 			colorName="ColorRed";
 			id=7;
 		};
-		class Item7
+		class Item4
 		{
 			dataType="Marker";
 			position[]={7487.3516,204.43799,9653.1387};
@@ -261,7 +193,7 @@ class Mission
 			id=8;
 			atlOffset=-1.0220184;
 		};
-		class Item8
+		class Item5
 		{
 			dataType="Marker";
 			position[]={6005.5,62.220001,10420.739};
@@ -270,7 +202,7 @@ class Mission
 			colorName="ColorRed";
 			id=9;
 		};
-		class Item9
+		class Item6
 		{
 			dataType="Marker";
 			position[]={6164.4912,59.209,11201.927};
@@ -284,7 +216,7 @@ class Mission
 			id=10;
 			atlOffset=51.391636;
 		};
-		class Item10
+		class Item7
 		{
 			dataType="Marker";
 			position[]={10045.777,409.87,11768.16};
@@ -293,7 +225,7 @@ class Mission
 			colorName="ColorRed";
 			id=11;
 		};
-		class Item11
+		class Item8
 		{
 			dataType="Marker";
 			position[]={9724.1826,408.97699,12258.089};
@@ -307,7 +239,7 @@ class Mission
 			id=12;
 			atlOffset=42.019257;
 		};
-		class Item12
+		class Item9
 		{
 			dataType="Marker";
 			position[]={10366.036,349.50101,8882.4482};
@@ -321,7 +253,7 @@ class Mission
 			id=13;
 			atlOffset=75.681366;
 		};
-		class Item13
+		class Item10
 		{
 			dataType="Marker";
 			position[]={11055.254,350.38,11492.884};
@@ -330,7 +262,7 @@ class Mission
 			colorName="ColorRed";
 			id=14;
 		};
-		class Item14
+		class Item11
 		{
 			dataType="Marker";
 			position[]={13781.726,203.384,10977.511};
@@ -340,7 +272,7 @@ class Mission
 			id=15;
 			atlOffset=-0.00025939941;
 		};
-		class Item15
+		class Item12
 		{
 			dataType="Marker";
 			position[]={13781.593,200.31599,10977.982};
@@ -353,7 +285,7 @@ class Mission
 			id=16;
 			atlOffset=-3.1407776;
 		};
-		class Item16
+		class Item13
 		{
 			dataType="Marker";
 			position[]={12888.67,183.04218,8577.7383};
@@ -365,7 +297,7 @@ class Mission
 			b=2500;
 			id=17;
 		};
-		class Item17
+		class Item14
 		{
 			dataType="Marker";
 			position[]={12888.803,184.57201,8577.2666};
@@ -375,7 +307,7 @@ class Mission
 			id=18;
 			atlOffset=1.5500488;
 		};
-		class Item18
+		class Item15
 		{
 			dataType="Marker";
 			position[]={11008.868,182.50999,4210.9951};
@@ -384,7 +316,7 @@ class Mission
 			colorName="ColorRed";
 			id=19;
 		};
-		class Item19
+		class Item16
 		{
 			dataType="Marker";
 			position[]={11009.042,179.03999,4211.2422};
@@ -397,7 +329,7 @@ class Mission
 			id=20;
 			atlOffset=-3.4700012;
 		};
-		class Item20
+		class Item17
 		{
 			dataType="Marker";
 			position[]={4702.8203,88.779388,3164.1287};
@@ -406,7 +338,7 @@ class Mission
 			colorName="ColorRed";
 			id=21;
 		};
-		class Item21
+		class Item18
 		{
 			dataType="Marker";
 			position[]={4702.833,85.160004,3163.4971};
@@ -419,7 +351,7 @@ class Mission
 			id=22;
 			atlOffset=-3.5883026;
 		};
-		class Item22
+		class Item19
 		{
 			dataType="Marker";
 			position[]={2682.4829,216.476,2592.3391};
@@ -429,7 +361,7 @@ class Mission
 			id=23;
 			atlOffset=-0.97399902;
 		};
-		class Item23
+		class Item20
 		{
 			dataType="Marker";
 			position[]={2681.99,213.769,2594.0149};
@@ -442,7 +374,7 @@ class Mission
 			id=24;
 			atlOffset=-3.6809998;
 		};
-		class Item24
+		class Item21
 		{
 			dataType="Marker";
 			position[]={2436.7759,71.656998,7222.6128};
@@ -452,7 +384,7 @@ class Mission
 			id=25;
 			atlOffset=-0.63817596;
 		};
-		class Item25
+		class Item22
 		{
 			dataType="Marker";
 			position[]={2436.9299,67.987999,7223.1812};
@@ -465,7 +397,7 @@ class Mission
 			id=26;
 			atlOffset=-4.3340836;
 		};
-		class Item26
+		class Item23
 		{
 			dataType="Marker";
 			position[]={2694.9309,169.77901,12325.826};
@@ -475,7 +407,7 @@ class Mission
 			id=27;
 			atlOffset=0.00018310547;
 		};
-		class Item27
+		class Item24
 		{
 			dataType="Marker";
 			position[]={2689.3579,166.438,12327.879};
@@ -488,7 +420,7 @@ class Mission
 			id=28;
 			atlOffset=-3.4433746;
 		};
-		class Item28
+		class Item25
 		{
 			dataType="Marker";
 			position[]={2970.7439,132.299,13096.59};
@@ -498,7 +430,7 @@ class Mission
 			id=29;
 			atlOffset=0.00012207031;
 		};
-		class Item29
+		class Item26
 		{
 			dataType="Marker";
 			position[]={2965.1721,128.873,13098.645};
@@ -511,13 +443,13 @@ class Mission
 			id=30;
 			atlOffset=-3.4432983;
 		};
-		class Item30
+		class Item27
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7774.2026,110.20032,12518.729};
-				angles[]={0.047963165,1.8030216,0.079830915};
+				position[]={7492.5322,206.42889,9651.9805};
+				angles[]={-0,1.8030216,0};
 			};
 			side="Empty";
 			flags=4;
@@ -528,7 +460,7 @@ class Mission
 			id=32;
 			type="MapBoard_Tanoa_F";
 		};
-		class Item31
+		class Item28
 		{
 			dataType="Object";
 			class PositionInfo
@@ -540,14 +472,13 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="RadioTower206GenOn = false;";
 				name="RadioTower206Gen";
 			};
 			id=33;
 			type="Land_PowerGenerator_F";
 			atlOffset=1.5258789e-005;
 		};
-		class Item32
+		class Item29
 		{
 			dataType="Object";
 			class PositionInfo
@@ -563,7 +494,7 @@ class Mission
 			id=34;
 			type="Land_TableDesk_F";
 		};
-		class Item33
+		class Item30
 		{
 			dataType="Object";
 			class PositionInfo
@@ -579,7 +510,7 @@ class Mission
 			id=35;
 			type="Land_Laptop_device_F";
 		};
-		class Item34
+		class Item31
 		{
 			dataType="Object";
 			class PositionInfo
@@ -591,14 +522,13 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="RadioTower206ComputerOn = false;";
 				name="RadioTower206Computer";
 			};
 			id=36;
 			type="Land_Laptop_unfolded_F";
 			atlOffset=4.5776367e-005;
 		};
-		class Item35
+		class Item32
 		{
 			dataType="Object";
 			class PositionInfo
@@ -613,6 +543,904 @@ class Mission
 			};
 			id=39;
 			type="Land_Shed_02_F";
+		};
+		class Item33
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10114.473,410.66553,11742.87};
+				angles[]={-0,3.2909203,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="CommsAlphaGen";
+			};
+			id=40;
+			type="Land_PowerGenerator_F";
+		};
+		class Item34
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9946.9316,410.94083,11787.981};
+				angles[]={6.2762628,3.0039487,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="CommsAlphaComputer";
+			};
+			id=41;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item35
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11153.332,351.17554,11434.894};
+				angles[]={-0,4.7416649,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="CommsBravoGen";
+			};
+			id=42;
+			type="Land_PowerGenerator_F";
+		};
+		class Item36
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2658.3586,171.61069,12306.161};
+				angles[]={6.2378831,0.94021136,0.010669862};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="CommsWhiskyGen";
+			};
+			id=43;
+			type="Land_PowerGenerator_F";
+		};
+		class Item37
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11025.302,183.32634,4216.7993};
+				angles[]={-0,4.4448752,0.0026520467};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower167Gen";
+			};
+			id=44;
+			type="Land_PowerGenerator_F";
+		};
+		class Item38
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12893.482,183.74496,8575.6553};
+				angles[]={0.010664274,4.7028422,0.013332055};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower183Gen";
+			};
+			id=45;
+			type="Land_PowerGenerator_F";
+		};
+		class Item39
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13772.188,200.61824,10948.854};
+				angles[]={6.1245327,3.986393,0.19226101};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower204Gen";
+			};
+			id=46;
+			type="Land_PowerGenerator_F";
+		};
+		class Item40
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2673.7246,218.4738,2590.6851};
+				angles[]={6.2661548,2.2042789,0.012872576};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower220Gen";
+			};
+			id=47;
+			type="Land_PowerGenerator_F";
+		};
+		class Item41
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6620.7495,67.537575,7852.5972};
+				angles[]={0.087774232,5.3189573,6.1690178};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower71Gen";
+			};
+			id=48;
+			type="Land_PowerGenerator_F";
+		};
+		class Item42
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2436.9189,73.795937,7237.0991};
+				angles[]={6.2325611,3.1487854,0.015998369};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower80Gen";
+			};
+			id=49;
+			type="Land_PowerGenerator_F";
+		};
+		class Item43
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4703.1738,89.549271,3164.0271};
+				angles[]={6.2352247,3.1131954,6.2245865};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower89Gen";
+			};
+			id=50;
+			type="Land_PowerGenerator_F";
+		};
+		class Item44
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6005.1743,63.01553,10420.595};
+				angles[]={-0,1.6454303,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTowerGeorgeTownGen";
+			};
+			id=51;
+			type="Land_PowerGenerator_F";
+		};
+		class Item45
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2976.2844,132.95781,13078.99};
+				angles[]={0.021331646,4.8609781,6.2086568};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTowerGSMGen";
+			};
+			id=52;
+			type="Land_PowerGenerator_F";
+		};
+		class Item46
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11166.997,351.58667,11468.216};
+				angles[]={6.2744236,6.1347923,6.2738953};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="CommsBravoComputer";
+			};
+			id=53;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item47
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2706.0833,170.79655,12327.18};
+				angles[]={6.2768002,3.2146626,0.0021836606};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="CommsWhiskyComputer";
+			};
+			id=54;
+			type="Land_Laptop_unfolded_F";
+			atlOffset=0.0010375977;
+		};
+		class Item48
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11017.99,184.13771,4221.5049};
+				angles[]={6.2763062,2.2950382,0.0045934827};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower167Computer";
+			};
+			id=55;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item49
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12871.326,184.67747,8574.2393};
+				angles[]={0.0069225952,6.216537,6.2766256};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="RadioTower183Computer";
+			};
+			id=56;
+			type="Land_Laptop_unfolded_F";
+			atlOffset=0.81929016;
+		};
+		class Item50
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13773.494,201.29648,10947.721};
+				angles[]={6.2792945,2.9245532,0.006523639};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower204Computer";
+			};
+			id=57;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item51
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2690.6929,219.15189,2594.2012};
+				angles[]={0.0038291984,5.2694778,0.0031644255};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower220Computer";
+			};
+			id=58;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item52
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6622.0664,67.863007,7855.749};
+				angles[]={6.2815294,0.94285333,0.001035801};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower71Computer";
+			};
+			id=59;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item53
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2410.5898,68.904144,7227.4277};
+				angles[]={0,4.6273832,0.0049675321};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="RadioTower80Computer";
+			};
+			id=60;
+			type="Land_Laptop_unfolded_F";
+			atlOffset=0.81502533;
+		};
+		class Item54
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4694.085,90.020103,3154.6414};
+				angles[]={0.0033829133,0.68006599,6.2795315};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTower89Computer";
+			};
+			id=61;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item55
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6026.127,63.154442,10427.698};
+				angles[]={-0,2.2950382,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTowerGeorgeTownComputer";
+			};
+			id=62;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item56
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2923.1013,128.54294,13082.767};
+				angles[]={6.259192,2.2950382,6.2778478};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="RadioTowerGSMComputer";
+			};
+			id=63;
+			type="Land_Laptop_unfolded_F";
+		};
+		class Item57
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6026.1655,62.582756,10427.181};
+				angles[]={-0,1.5966859,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=64;
+			type="Land_TableDesk_F";
+		};
+		class Item58
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6026.0962,63.152344,10426.81};
+				angles[]={6.2764463,1.176057,6.2764373};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=65;
+			type="Land_Laptop_device_F";
+		};
+		class Item59
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6623.5762,67.734314,7857.1729};
+				angles[]={0,3.713201,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=66;
+			type="Land_Shed_02_F";
+			atlOffset=0.54359436;
+		};
+		class Item60
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6622.5986,67.293259,7855.4834};
+				angles[]={6.2815294,0.55772173,0.001035801};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=67;
+			type="Land_TableDesk_F";
+		};
+		class Item61
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6622.9414,67.861832,7855.0596};
+				angles[]={0.0042567407,0.074529275,6.2806249};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=68;
+			type="Land_Laptop_device_F";
+		};
+		class Item62
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12870.999,184.11044,8574.3389};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=69;
+			type="Land_TableDesk_F";
+		};
+		class Item63
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12870.576,184.68219,8574.1807};
+				angles[]={-0,0.074529275,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=70;
+			type="Land_Laptop_device_F";
+		};
+		class Item64
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13773.41,201.16591,10946.34};
+				angles[]={0,0.90949923,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=71;
+			type="Land_Shed_02_F";
+			atlOffset=0.62385559;
+		};
+		class Item65
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13773.848,200.72656,10947.536};
+				angles[]={0.00119604,3.3904798,6.2816415};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=72;
+			type="Land_TableDesk_F";
+		};
+		class Item66
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13774.218,201.29781,10947.475};
+				angles[]={0.00119604,3.7523189,6.2816415};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=73;
+			type="Land_Laptop_device_F";
+		};
+		class Item67
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11166.534,351.02408,11468.28};
+				angles[]={6.2675567,0.14189705,6.2747989};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=74;
+			type="Land_TableDesk_F";
+			atlOffset=0.016937256;
+		};
+		class Item68
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11166.084,351.60056,11468.337};
+				angles[]={6.2675605,0.56884789,6.2747989};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=75;
+			type="Land_Laptop_device_F";
+		};
+		class Item69
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9947.3613,410.37164,11787.907};
+				angles[]={-0,3.1701005,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=76;
+			type="Land_TableDesk_F";
+			atlOffset=3.0517578e-005;
+		};
+		class Item70
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9947.751,410.94339,11787.978};
+				angles[]={-0,3.4108884,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=77;
+			type="Land_Laptop_device_F";
+		};
+		class Item71
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2706.5063,170.22832,12326.94};
+				angles[]={0,3.5500588,6.2826972};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=78;
+			type="Land_TableDesk_F";
+		};
+		class Item72
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2706.8442,170.7999,12326.833};
+				angles[]={-0,4.0125837,6.2826972};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=79;
+			type="Land_Laptop_device_F";
+		};
+		class Item73
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2923.0554,127.97258,13082.483};
+				angles[]={-0,1.7034953,6.2826972};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=80;
+			type="Land_TableDesk_F";
+		};
+		class Item74
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2922.9812,128.54155,13081.969};
+				angles[]={6.2823396,1.1994604,6.2758288};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=81;
+			type="Land_Laptop_device_F";
+		};
+		class Item75
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2408.5103,68.781647,7226.7563};
+				angles[]={0,1.6237789,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=82;
+			type="Land_Shed_02_F";
+		};
+		class Item76
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2410.5825,68.340385,7227};
+				angles[]={-0,4.7589722,6.2812324};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=83;
+			type="Land_TableDesk_F";
+		};
+		class Item77
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2410.5779,68.914368,7226.5557};
+				angles[]={-0,4.9826317,6.2812324};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=85;
+			type="Land_Laptop_device_F";
+			atlOffset=0.0022125244;
+		};
+		class Item78
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4694.7773,89.891823,3156.772};
+				angles[]={0,4.0818038,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=86;
+			type="Land_Shed_02_F";
+			atlOffset=0.66174316;
+		};
+		class Item79
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4693.7749,89.451042,3155.0713};
+				angles[]={6.2820406,0.86914063,0.0015822123};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=87;
+			type="Land_TableDesk_F";
+		};
+		class Item80
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4693.3994,90.022522,3155.3513};
+				angles[]={6.2820406,1.2607591,0.0015822123};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=88;
+			type="Land_Laptop_device_F";
+		};
+		class Item81
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2688.9219,219.02596,2595.4624};
+				angles[]={0,2.4286463,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=89;
+			type="Land_Shed_02_F";
+			atlOffset=0.69963074;
+		};
+		class Item82
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2690.2944,218.5847,2593.9377};
+				angles[]={6.2817206,5.5947537,6.2818937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=90;
+			type="Land_TableDesk_F";
+		};
+		class Item83
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2689.9744,219.15868,2593.6599};
+				angles[]={6.2817206,6.0160308,6.2818937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=91;
+			type="Land_Laptop_device_F";
+			atlOffset=0.0022125244;
+		};
+		class Item84
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11018.767,184.14174,4221.8091};
+				angles[]={0.0018269814,3.2295012,0.00069053395};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=92;
+			type="Land_Laptop_device_F";
+		};
+		class Item85
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11018.942,184.01122,4219.6392};
+				angles[]={0,5.9299841,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=93;
+			type="Land_Shed_02_F";
+			atlOffset=0.59906006;
+		};
+		class Item86
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11018.254,183.57005,4221.5757};
+				angles[]={0.0018269814,2.8038814,0.00069053395};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=94;
+			type="Land_TableDesk_F";
+			atlOffset=9.1552734e-005;
 		};
 	};
 };
