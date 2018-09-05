@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=168;
+		nextID=197;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=22;
 	};
 	class Camera
 	{
-		pos[]={7507.0503,227.02193,9631.7441};
-		dir[]={-0.38768414,-0.61173743,0.6895867};
-		up[]={-0.29978898,0.79106343,0.53324324};
-		aside[]={0.87171215,4.0978193e-008,0.49007592};
+		pos[]={7485.6816,232.68401,9625.8418};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -257,6 +257,8 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="TanoaCTI";
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
@@ -290,22 +292,127 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7545.2803,214.52676,9601.6104};
+						position[]={7545.2798,214.52658,9601.6104};
 					};
 					side="West";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						isPlayer=1;
 					};
 					id=1;
 					type="B_Soldier_F";
+					atlOffset=21.267593;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male10ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=3;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
 			id=0;
+			atlOffset=21.267593;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Alpha 1-1b";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 		class Item1
 		{
@@ -330,290 +437,8 @@ class Mission
 			name="RadioTowers";
 			class Entities
 			{
-				items=4;
+				items=3;
 				class Item0
-				{
-					dataType="Layer";
-					name="Zombie Trigger";
-					class Entities
-					{
-						items=13;
-						class Item0
-						{
-							dataType="Trigger";
-							position[]={2952.7029,131.95271,13086.907};
-							class Attributes
-							{
-								name="RadioTowerGSM_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=35.164001;
-								sizeB=27.863001;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=130;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item1
-						{
-							dataType="Trigger";
-							position[]={6015.104,62.118607,10421.409};
-							class Attributes
-							{
-								name="RadioTowerGeorgeTown_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=23.900999;
-								sizeB=14.092;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=129;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item2
-						{
-							dataType="Trigger";
-							position[]={4696.1821,88.5588,3163.929};
-							class Attributes
-							{
-								name="RadioTower89_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=14.122;
-								sizeB=15.406;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=128;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item3
-						{
-							dataType="Trigger";
-							position[]={2421.9641,70.000351,7228.3179};
-							class Attributes
-							{
-								name="RadioTower80_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=29.413;
-								sizeB=30.153999;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=127;
-							type="EmptyDetectorArea10x10";
-							atlOffset=-7.6293945e-006;
-						};
-						class Item4
-						{
-							dataType="Trigger";
-							position[]={6622.4819,66.555473,7854.3882};
-							angle=5.3938179;
-							class Attributes
-							{
-								name="RadioTower71_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=19.587;
-								sizeB=17.604;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=126;
-							type="EmptyDetectorArea10x10";
-							atlOffset=7.6293945e-006;
-						};
-						class Item5
-						{
-							dataType="Trigger";
-							position[]={2682.2639,217.45,2596.1909};
-							angle=0.79496258;
-							class Attributes
-							{
-								name="RadioTower220_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=12.864;
-								sizeB=13.322;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=125;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item6
-						{
-							dataType="Trigger";
-							position[]={7486.2432,205.46001,9653.1953};
-							angle=5.4869657;
-							class Attributes
-							{
-								name="RadioTower206_Trigger_1";
-								condition="call{this}";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=18.707001;
-								sizeB=24.257999;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=117;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item7
-						{
-							dataType="Trigger";
-							position[]={13767.151,198.71574,10948.313};
-							class Attributes
-							{
-								name="RadioTower204_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=16.806999;
-								sizeB=18.075001;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=124;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item8
-						{
-							dataType="Trigger";
-							position[]={12882.657,182.22778,8576.8574};
-							class Attributes
-							{
-								name="RadioTower183_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=19.729;
-								sizeB=15.392;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=123;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item9
-						{
-							dataType="Trigger";
-							position[]={11013.525,182.50999,4214.4551};
-							angle=5.9597054;
-							class Attributes
-							{
-								name="RadioTower167_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=19.131001;
-								sizeB=15.872;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=122;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item10
-						{
-							dataType="Trigger";
-							position[]={2679.25,170.86517,12319.011};
-							angle=5.6166434;
-							class Attributes
-							{
-								name="CommsWhisky_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=33.777;
-								sizeB=25.195999;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=121;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item11
-						{
-							dataType="Trigger";
-							position[]={11037.327,350.52921,11498.327};
-							angle=6.2505646;
-							class Attributes
-							{
-								name="CommsBravo_Trigger_1";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=169.534;
-								sizeB=89.178001;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=120;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item12
-						{
-							dataType="Trigger";
-							position[]={10037.188,409.89001,11789.115};
-							angle=0.20732754;
-							class Attributes
-							{
-								name="CommsAlpha_Trigger_1";
-								condition="call{this}";
-								onActivation="call{null = [""Zombies"", thisTrigger] execVM ""RadioSystem\radioAttack.sqf"";}";
-								onDeactivation="call{systemChat ""The Zombies are gone from: "" + (name thisTrigger);}";
-								sizeA=108.916;
-								sizeB=49.75;
-								sizeC=5;
-								repeatable=1;
-								activationBy="GUER";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=119;
-							type="EmptyDetectorArea10x10";
-						};
-					};
-					id=131;
-					atlOffset=238.89633;
-				};
-				class Item1
 				{
 					dataType="Layer";
 					name="Markers";
@@ -918,275 +743,7 @@ class Mission
 					id=132;
 					atlOffset=135.0975;
 				};
-				class Item2
-				{
-					dataType="Layer";
-					name="Opfor Triggers";
-					class Entities
-					{
-						items=13;
-						class Item0
-						{
-							dataType="Trigger";
-							position[]={4696.1821,88.5588,3163.929};
-							class Attributes
-							{
-								name="RadioTower89Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=14.122;
-								sizeB=15.406;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=107;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item1
-						{
-							dataType="Trigger";
-							position[]={10037.188,409.89001,11789.115};
-							angle=0.20732754;
-							class Attributes
-							{
-								name="CommsAlphaTrigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=108.916;
-								sizeB=49.75;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=100;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item2
-						{
-							dataType="Trigger";
-							position[]={11037.327,350.52921,11498.327};
-							angle=6.2505617;
-							class Attributes
-							{
-								name="CommsBravoTrigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=169.534;
-								sizeB=89.178001;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=101;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item3
-						{
-							dataType="Trigger";
-							position[]={2679.25,170.86517,12319.011};
-							angle=5.6166425;
-							class Attributes
-							{
-								name="CommsWhiskyTrigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=33.777;
-								sizeB=25.195999;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=110;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item4
-						{
-							dataType="Trigger";
-							position[]={11013.525,182.50999,4214.4551};
-							angle=5.9597034;
-							class Attributes
-							{
-								name="RadioTower167Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=19.131001;
-								sizeB=15.872;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=106;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item5
-						{
-							dataType="Trigger";
-							position[]={12882.657,182.22778,8576.8574};
-							class Attributes
-							{
-								name="RadioTower183Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=19.729;
-								sizeB=15.392;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=103;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item6
-						{
-							dataType="Trigger";
-							position[]={13767.151,198.71574,10948.313};
-							class Attributes
-							{
-								name="RadioTower204Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=16.806999;
-								sizeB=18.075001;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=102;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item7
-						{
-							dataType="Trigger";
-							position[]={7486.2251,205.46001,9653.2588};
-							angle=5.4869652;
-							class Attributes
-							{
-								name="RadioTower206Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=18.707001;
-								sizeB=24.257999;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-								isServerOnly=1;
-							};
-							id=99;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item8
-						{
-							dataType="Trigger";
-							position[]={2682.2639,217.45,2596.1909};
-							angle=0.79496258;
-							class Attributes
-							{
-								name="RadioTower220Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=12.864;
-								sizeB=13.322;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=108;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item9
-						{
-							dataType="Trigger";
-							position[]={6622.4819,66.555473,7854.3882};
-							angle=5.3938179;
-							class Attributes
-							{
-								name="RadioTower71Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=19.587;
-								sizeB=17.604;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=104;
-							type="EmptyDetectorArea10x10";
-							atlOffset=7.6293945e-006;
-						};
-						class Item10
-						{
-							dataType="Trigger";
-							position[]={2421.9641,70.000351,7228.3179};
-							class Attributes
-							{
-								name="RadioTower80Trigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=29.413;
-								sizeB=30.153999;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=109;
-							type="EmptyDetectorArea10x10";
-							atlOffset=-7.6293945e-006;
-						};
-						class Item11
-						{
-							dataType="Trigger";
-							position[]={6015.104,62.118607,10421.409};
-							class Attributes
-							{
-								name="RadioTowerGeorgeTownTrigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=23.900999;
-								sizeB=14.092;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=105;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item12
-						{
-							dataType="Trigger";
-							position[]={2952.7029,131.95271,13086.907};
-							class Attributes
-							{
-								name="RadioTowerGSMTrigger";
-								condition="";
-								onActivation="call{null = [""OPFOR"", name this]execVM ""RadioSystem\radioAttack.sqf"";}";
-								sizeA=35.164001;
-								sizeB=27.863001;
-								sizeC=5;
-								repeatable=1;
-								activationBy="EAST";
-								isRectangle=1;
-							};
-							id=111;
-							type="EmptyDetectorArea10x10";
-						};
-					};
-					id=133;
-					atlOffset=128.92397;
-				};
-				class Item3
+				class Item1
 				{
 					dataType="Layer";
 					name="Props";
@@ -1250,12 +807,12 @@ class Mission
 								position[]={12870.999,184.11044,8574.3389};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 							};
 							id=69;
 							type="Land_TableDesk_F";
+							atlOffset=0.39112854;
 						};
 						class Item4
 						{
@@ -1818,7 +1375,7 @@ class Mission
 							};
 							id=56;
 							type="Land_Laptop_unfolded_F";
-							atlOffset=0.81802368;
+							atlOffset=1.2450867;
 						};
 						class Item38
 						{
@@ -2184,9 +1741,852 @@ class Mission
 					id=134;
 					atlOffset=134.81264;
 				};
+				class Item2
+				{
+					dataType="Layer";
+					name="Triggers";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Layer";
+							name="BlueTriggers";
+							class Entities
+							{
+								items=13;
+								class Item0
+								{
+									dataType="Trigger";
+									position[]={6015.104,62.118607,10421.409};
+									class Attributes
+									{
+										name="RadioTowerGeorgeTown_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=23.900999;
+										sizeB=14.092;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=185;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item1
+								{
+									dataType="Trigger";
+									position[]={4696.1821,88.5588,3163.929};
+									class Attributes
+									{
+										name="RadioTower89_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=14.122;
+										sizeB=15.406;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=186;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item2
+								{
+									dataType="Trigger";
+									position[]={2421.9641,70.000351,7228.3179};
+									class Attributes
+									{
+										name="RadioTower80_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=29.413;
+										sizeB=30.153999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=187;
+									type="EmptyDetectorArea10x10";
+									atlOffset=-7.6293945e-006;
+								};
+								class Item3
+								{
+									dataType="Trigger";
+									position[]={6622.4819,66.555473,7854.3882};
+									angle=5.3938179;
+									class Attributes
+									{
+										name="RadioTower71_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.587;
+										sizeB=17.604;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=188;
+									type="EmptyDetectorArea10x10";
+									atlOffset=7.6293945e-006;
+								};
+								class Item4
+								{
+									dataType="Trigger";
+									position[]={2682.2639,217.45,2596.1909};
+									angle=0.79496258;
+									class Attributes
+									{
+										name="RadioTower220_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=12.864;
+										sizeB=13.322;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=189;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item5
+								{
+									dataType="Trigger";
+									position[]={7486.2432,205.46001,9653.1953};
+									angle=5.4869657;
+									class Attributes
+									{
+										name="RadioTower206_Trigger_Blue";
+										condition="call{this}";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=18.707001;
+										sizeB=24.257999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=190;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item6
+								{
+									dataType="Trigger";
+									position[]={13767.151,198.71574,10948.313};
+									class Attributes
+									{
+										name="RadioTower204_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=16.806999;
+										sizeB=18.075001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=191;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item7
+								{
+									dataType="Trigger";
+									position[]={12882.657,182.22778,8576.8574};
+									class Attributes
+									{
+										name="RadioTower183_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.729;
+										sizeB=15.392;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=192;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item8
+								{
+									dataType="Trigger";
+									position[]={11013.525,182.50999,4214.4551};
+									angle=5.9597054;
+									class Attributes
+									{
+										name="RadioTower167_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.131001;
+										sizeB=15.872;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=193;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item9
+								{
+									dataType="Trigger";
+									position[]={2679.25,170.86517,12319.011};
+									angle=5.6166434;
+									class Attributes
+									{
+										name="CommsWhisky_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=33.777;
+										sizeB=25.195999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=194;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item10
+								{
+									dataType="Trigger";
+									position[]={11037.327,350.52921,11498.327};
+									angle=6.2505646;
+									class Attributes
+									{
+										name="CommsBravo_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=169.534;
+										sizeB=89.178001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=195;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item11
+								{
+									dataType="Trigger";
+									position[]={10037.188,409.89001,11789.115};
+									angle=0.20732754;
+									class Attributes
+									{
+										name="CommsAlpha_Trigger_Blue";
+										condition="call{this}";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=108.916;
+										sizeB=49.75;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=196;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item12
+								{
+									dataType="Trigger";
+									position[]={2952.7029,131.95271,13086.907};
+									class Attributes
+									{
+										name="RadioTowerGSM_Trigger_Blue";
+										onDeactivation="call{systemChat (""Blue Forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=35.164001;
+										sizeB=27.863001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="WEST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=184;
+									type="EmptyDetectorArea10x10";
+								};
+							};
+							id=182;
+							atlOffset=114.0871;
+						};
+						class Item1
+						{
+							dataType="Layer";
+							name="Opfor Triggers";
+							class Entities
+							{
+								items=13;
+								class Item0
+								{
+									dataType="Trigger";
+									position[]={4696.1821,88.5588,3163.929};
+									class Attributes
+									{
+										name="RadioTower89_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=14.122;
+										sizeB=15.406;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=107;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item1
+								{
+									dataType="Trigger";
+									position[]={10037.188,409.89001,11789.115};
+									angle=0.20732754;
+									class Attributes
+									{
+										name="CommsAlpha_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=108.916;
+										sizeB=49.75;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=100;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item2
+								{
+									dataType="Trigger";
+									position[]={11037.327,350.52921,11498.327};
+									angle=6.2505646;
+									class Attributes
+									{
+										name="CommsBravo_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=169.534;
+										sizeB=89.178001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=101;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item3
+								{
+									dataType="Trigger";
+									position[]={2679.25,170.86517,12319.011};
+									angle=5.6166434;
+									class Attributes
+									{
+										name="CommsWhisky_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=33.777;
+										sizeB=25.195999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=110;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item4
+								{
+									dataType="Trigger";
+									position[]={11013.525,182.50999,4214.4551};
+									angle=5.9597054;
+									class Attributes
+									{
+										name="RadioTower167_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.131001;
+										sizeB=15.872;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=106;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item5
+								{
+									dataType="Trigger";
+									position[]={12882.657,182.22778,8576.8574};
+									class Attributes
+									{
+										name="RadioTower183_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.729;
+										sizeB=15.392;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=103;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item6
+								{
+									dataType="Trigger";
+									position[]={13767.151,198.71574,10948.313};
+									class Attributes
+									{
+										name="RadioTower204_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=16.806999;
+										sizeB=18.075001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=102;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item7
+								{
+									dataType="Trigger";
+									position[]={7486.2251,205.46001,9653.2588};
+									angle=5.4869657;
+									class Attributes
+									{
+										name="RadioTower206_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=18.707001;
+										sizeB=24.257999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=99;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item8
+								{
+									dataType="Trigger";
+									position[]={2682.2639,217.45,2596.1909};
+									angle=0.79496258;
+									class Attributes
+									{
+										name="RadioTower220_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=12.864;
+										sizeB=13.322;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=108;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item9
+								{
+									dataType="Trigger";
+									position[]={6622.4819,66.555473,7854.3882};
+									angle=5.3938179;
+									class Attributes
+									{
+										name="RadioTower71_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.587;
+										sizeB=17.604;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=104;
+									type="EmptyDetectorArea10x10";
+									atlOffset=7.6293945e-006;
+								};
+								class Item10
+								{
+									dataType="Trigger";
+									position[]={2421.9641,70.000351,7228.3179};
+									class Attributes
+									{
+										name="RadioTower80_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=29.413;
+										sizeB=30.153999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=109;
+									type="EmptyDetectorArea10x10";
+									atlOffset=-7.6293945e-006;
+								};
+								class Item11
+								{
+									dataType="Trigger";
+									position[]={6015.104,62.118607,10421.409};
+									class Attributes
+									{
+										name="RadioTowerGeorgeTown_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=23.900999;
+										sizeB=14.092;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=105;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item12
+								{
+									dataType="Trigger";
+									position[]={2952.7029,131.95271,13086.907};
+									class Attributes
+									{
+										name="RadioTowerGSM_Trigger_Red";
+										condition="";
+										onActivation="call{null = [""Opfor"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""Red forces are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=35.164001;
+										sizeB=27.863001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="EAST";
+										isRectangle=1;
+									};
+									id=111;
+									type="EmptyDetectorArea10x10";
+								};
+							};
+							id=133;
+							atlOffset=128.92397;
+						};
+						class Item2
+						{
+							dataType="Layer";
+							name="Zombie Trigger";
+							class Entities
+							{
+								items=13;
+								class Item0
+								{
+									dataType="Trigger";
+									position[]={2952.7029,131.95271,13086.907};
+									class Attributes
+									{
+										name="RadioTowerGSM_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=35.164001;
+										sizeB=27.863001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=130;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item1
+								{
+									dataType="Trigger";
+									position[]={6015.104,62.118607,10421.409};
+									class Attributes
+									{
+										name="RadioTowerGeorgeTown_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=23.900999;
+										sizeB=14.092;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=129;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item2
+								{
+									dataType="Trigger";
+									position[]={4696.1821,88.5588,3163.929};
+									class Attributes
+									{
+										name="RadioTower89_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=14.122;
+										sizeB=15.406;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=128;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item3
+								{
+									dataType="Trigger";
+									position[]={2421.9641,70.000351,7228.3179};
+									class Attributes
+									{
+										name="RadioTower80_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=29.413;
+										sizeB=30.153999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=127;
+									type="EmptyDetectorArea10x10";
+									atlOffset=-7.6293945e-006;
+								};
+								class Item4
+								{
+									dataType="Trigger";
+									position[]={6622.4819,66.555473,7854.3882};
+									angle=5.3938179;
+									class Attributes
+									{
+										name="RadioTower71_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.587;
+										sizeB=17.604;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=126;
+									type="EmptyDetectorArea10x10";
+									atlOffset=7.6293945e-006;
+								};
+								class Item5
+								{
+									dataType="Trigger";
+									position[]={2682.2639,217.45,2596.1909};
+									angle=0.79496258;
+									class Attributes
+									{
+										name="RadioTower220_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=12.864;
+										sizeB=13.322;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=125;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item6
+								{
+									dataType="Trigger";
+									position[]={7486.2432,205.46001,9653.1953};
+									angle=5.4869657;
+									class Attributes
+									{
+										name="RadioTower206_Trigger_Green";
+										condition="call{this}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=18.707001;
+										sizeB=24.257999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=117;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item7
+								{
+									dataType="Trigger";
+									position[]={13767.151,198.71574,10948.313};
+									class Attributes
+									{
+										name="RadioTower204_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=16.806999;
+										sizeB=18.075001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=124;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item8
+								{
+									dataType="Trigger";
+									position[]={12882.657,182.22778,8576.8574};
+									class Attributes
+									{
+										name="RadioTower183_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.729;
+										sizeB=15.392;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=123;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item9
+								{
+									dataType="Trigger";
+									position[]={11013.525,182.50999,4214.4551};
+									angle=5.9597054;
+									class Attributes
+									{
+										name="RadioTower167_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=19.131001;
+										sizeB=15.872;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=122;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item10
+								{
+									dataType="Trigger";
+									position[]={2679.25,170.86517,12319.011};
+									angle=5.6166434;
+									class Attributes
+									{
+										name="CommsWhisky_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=33.777;
+										sizeB=25.195999;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=121;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item11
+								{
+									dataType="Trigger";
+									position[]={11037.327,350.52921,11498.327};
+									angle=6.2505646;
+									class Attributes
+									{
+										name="CommsBravo_Trigger_Green";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=169.534;
+										sizeB=89.178001;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=120;
+									type="EmptyDetectorArea10x10";
+								};
+								class Item12
+								{
+									dataType="Trigger";
+									position[]={10037.188,409.89001,11789.115};
+									angle=0.20732754;
+									class Attributes
+									{
+										name="CommsAlpha_Trigger_Green";
+										condition="call{this}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
+										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
+										sizeA=108.916;
+										sizeB=49.75;
+										sizeC=5;
+										repeatable=1;
+										activationBy="GUER";
+										isRectangle=1;
+										isServerOnly=1;
+									};
+									id=119;
+									type="EmptyDetectorArea10x10";
+								};
+							};
+							id=131;
+							atlOffset=238.89633;
+						};
+					};
+					id=183;
+					atlOffset=131.69586;
+				};
 			};
 			id=95;
-			atlOffset=160.82411;
+			atlOffset=179.91144;
 		};
 		class Item3
 		{

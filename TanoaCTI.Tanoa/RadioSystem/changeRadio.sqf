@@ -5,6 +5,12 @@
       systemChat "Changing Radio Color";
       (_x select 2) setMarkerColor "ColorGreen";
       (_x select 0) setMarkerAlpha 25;
+    }
+    else
+    {
+      systemChat "Changing Radio Color";
+      (_x select 2) setMarkerColor "ColorRed";
+      (_x select 0) setMarkerAlpha 0;
     };
 } forEach RadioCoverage;
 
