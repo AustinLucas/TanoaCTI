@@ -8,7 +8,7 @@
     }
     else
     {
-      systemChat "Changing Radio Color";
+      //systemChat "Changing Radio Color";
       (_x select 2) setMarkerColor "ColorRed";
       (_x select 0) setMarkerAlpha 0;
     };
