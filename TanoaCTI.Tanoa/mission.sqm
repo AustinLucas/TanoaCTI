@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=228;
+		nextID=236;
 	};
 	class MarkerIDProvider
 	{
@@ -16,21 +16,20 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=34;
+		nextID=46;
 	};
 	class Camera
 	{
-		pos[]={8965.9502,47.554272,10109.752};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={8945.4844,77.984497,10120.99};
+		dir[]={-0.063450985,-0.9847123,0.16239649};
+		up[]={-0.35835481,0.17429608,0.91717094};
+		aside[]={0.93145663,-2.0220759e-006,0.36393878};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Characters_F",
-	"ace_explosives",
 	"A3_Props_F_Argo_Civilian_InfoBoards",
 	"A3_Ui_F",
 	"A3_Structures_F_Furniture",
@@ -41,13 +40,16 @@ addons[]=
 	"b52_loot",
 	"b52_random_vehicles",
 	"A3_Boat_F_Jets_Carrier_01",
-	"ryanzombiesfunctions"
+	"ryanzombiesfunctions",
+	"A3_Modules_F",
+	"A3_Weapons_F_Ammoboxes",
+	"ace_explosives"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=14;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -57,77 +59,91 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="ace_explosives";
-			name="ACE3 - Explosives";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item2
-		{
 			className="A3_Props_F_Argo";
 			name="Arma 3 Malden - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item2
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item3
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item6
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item7
 		{
 			className="B52_Loot";
 			name="Badca52's Loot System";
 			author="Badca52";
 		};
-		class Item9
+		class Item8
 		{
 			className="B52_Random_Vehicles";
 			name="Badca52's Random Vehicles";
 			author="Badca52";
 		};
-		class Item10
+		class Item9
 		{
 			className="A3_Boat_F_Jets";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item10
 		{
 			className="ryanzombiesfunctions";
 			name="ryanzombiesfunctions";
 			author="Ryan";
+		};
+		class Item11
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item13
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -148,8 +164,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -161,7 +177,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -241,8 +257,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -254,7 +270,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -287,7 +303,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
 			dataType="Group";
@@ -300,7 +316,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9053.6729,23.662073,10152.38};
+						position[]={8989.0713,22.938726,10146.907};
+						angles[]={0.1299223,0,0.010663962};
 					};
 					side="West";
 					flags=6;
@@ -308,30 +325,11 @@ class Mission
 					{
 						isPlayer=1;
 					};
-					id=227;
-					type="B_soldier_exp_F";
+					id=234;
+					type="B_soldier_AAT_F";
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -350,7 +348,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -369,7 +367,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=2;
 					};
 				};
 			};
@@ -398,26 +396,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="acex_headless_blacklist";
-					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
 		class Item1
@@ -2331,7 +2310,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTowerGSM_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=35.164001;
 										sizeB=27.863001;
@@ -2351,7 +2330,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTowerGeorgeTown_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=23.900999;
 										sizeB=14.092;
@@ -2371,7 +2350,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTower89_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=14.122;
 										sizeB=15.406;
@@ -2391,7 +2370,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTower80_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=29.413;
 										sizeB=30.153999;
@@ -2413,7 +2392,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTower71_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=19.587;
 										sizeB=17.604;
@@ -2435,7 +2414,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTower220_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=12.864;
 										sizeB=13.322;
@@ -2457,7 +2436,7 @@ class Mission
 									{
 										name="RadioTower206_Trigger_Green";
 										condition="call{this}";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=18.707001;
 										sizeB=24.257999;
@@ -2477,7 +2456,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTower204_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=16.806999;
 										sizeB=18.075001;
@@ -2497,7 +2476,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTower183_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=19.729;
 										sizeB=15.392;
@@ -2518,7 +2497,7 @@ class Mission
 									class Attributes
 									{
 										name="RadioTower167_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=19.131001;
 										sizeB=15.872;
@@ -2539,7 +2518,7 @@ class Mission
 									class Attributes
 									{
 										name="CommsWhisky_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=33.777;
 										sizeB=25.195999;
@@ -2560,7 +2539,7 @@ class Mission
 									class Attributes
 									{
 										name="CommsBravo_Trigger_Green";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=169.534;
 										sizeB=89.178001;
@@ -2582,7 +2561,7 @@ class Mission
 									{
 										name="CommsAlpha_Trigger_Green";
 										condition="call{this}";
-										onActivation="call{null = [""Zombies"", thisTrigger, thisList] spawn compile preprocessfilelinenumbers ""RadioSystem\radioAttack.sqf"";}";
+										onActivation="call{null = [""Zombies"", thisTrigger, thisList] execVM ""RadioSystem\radioAttack.sqf"";}";
 										onDeactivation="call{systemChat (""The Zombies are gone from: "" + (((str thisTrigger) splitString ""_"")select 0));}";
 										sizeA=108.916;
 										sizeB=49.75;
@@ -2926,7 +2905,7 @@ class Mission
 			name="Tanouka";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Marker";
@@ -2949,7 +2928,7 @@ class Mission
 							name="Building1";
 							class Entities
 							{
-								items=2;
+								items=3;
 								class Item0
 								{
 									dataType="Marker";
@@ -2958,6 +2937,7 @@ class Mission
 									text="Infected building";
 									type="mil_dot";
 									id=211;
+									atlOffset=6.6757202e-005;
 								};
 								class Item1
 								{
@@ -2967,9 +2947,10 @@ class Mission
 										position[]={8939.0303,21.482773,10143.192};
 										angles[]={0,0,6.2826962};
 									};
+									name="_ZombieSpawner";
 									id=216;
 									type="RyanZM_ModuleSpawn";
-									atlOffset=0.00029373169;
+									atlOffset=0.00036048889;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -3101,7 +3082,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=50;
+													value=25;
 												};
 											};
 										};
@@ -3272,7 +3253,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=100;
+													value=200;
 												};
 											};
 										};
@@ -3298,9 +3279,22 @@ class Mission
 										nAttributes=17;
 									};
 								};
+								class Item2
+								{
+									dataType="Logic";
+									class PositionInfo
+									{
+										position[]={8946.5078,21.478786,10140.636};
+										angles[]={0,0,6.2826962};
+									};
+									init="call{null = [(nearestObject[this,""Building""]), (synchronizedObjects this)] execVM ""TownSystem\TestScript.sqf""}";
+									id=228;
+									type="Logic";
+									atlOffset=2.6702881e-005;
+								};
 							};
 							id=221;
-							atlOffset=0.00014877319;
+							atlOffset=0.00012016296;
 						};
 						class Item1
 						{
@@ -3325,6 +3319,7 @@ class Mission
 									{
 										position[]={8869.4424,25.722624,10331.744};
 									};
+									name="_ZombieSpawner1";
 									id=215;
 									type="RyanZM_ModuleSpawn";
 									class CustomAttributes
@@ -3458,7 +3453,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=50;
+													value=25;
 												};
 											};
 										};
@@ -3629,7 +3624,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=100;
+													value=200;
 												};
 											};
 										};
@@ -3682,6 +3677,7 @@ class Mission
 									{
 										position[]={8793.0869,19.191742,10174.19};
 									};
+									name="_ZombieSpawner2";
 									id=214;
 									type="RyanZM_ModuleSpawn";
 									class CustomAttributes
@@ -3777,7 +3773,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=100;
+													value=450;
 												};
 											};
 										};
@@ -3815,7 +3811,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=50;
+													value=25;
 												};
 											};
 										};
@@ -3986,7 +3982,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=100;
+													value=200;
 												};
 											};
 										};
@@ -4018,11 +4014,66 @@ class Mission
 						};
 					};
 					id=210;
-					atlOffset=2.8318291;
+					atlOffset=2.8155155;
+				};
+				class Item2
+				{
+					dataType="Trigger";
+					position[]={8873.166,18.620073,10208.348};
+					class Attributes
+					{
+						name="Tanouka_Trigger_Blue";
+						condition="call{this}";
+						sizeA=250;
+						sizeB=250;
+						repeatable=1;
+						activationBy="WEST";
+						isServerOnly=1;
+					};
+					id=235;
+					type="EmptyDetectorAreaR250";
 				};
 			};
 			id=209;
-			atlOffset=1.2406731;
+			atlOffset=0.60071754;
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8961.5811,21.979639,10142.295};
+				angles[]={0.098347999,0,0.042640556};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=233;
+			type="Box_NATO_AmmoOrd_F";
+			atlOffset=-0.00045394897;
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=1;
+		};
+		class Links
+		{
+			items=1;
+			class Item0
+			{
+				linkID=0;
+				item0=228;
+				item1=216;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
 		};
 	};
 };

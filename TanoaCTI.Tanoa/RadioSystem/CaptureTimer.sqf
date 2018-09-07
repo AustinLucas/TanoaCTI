@@ -1,7 +1,7 @@
 _TimerEnd = 10; // Time to wait in seconds
 _loopCounter = 0;
 _RadioTower = _this select 0;
-_tsDefend = ("Defend" + _RadioTower);
+_tsDefend = ("Defend" + (str _RadioTower));
 systemChat (typeName _loopCounter);
 systemChat (typeName _TimerEnd);
 
