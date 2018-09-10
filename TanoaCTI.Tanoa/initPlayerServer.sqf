@@ -23,6 +23,7 @@ _PlayerName = Name player;
 checkForDB = [_ClientID, _PlayerUID, _PlayerName, player];
 publicVariableServer "checkForDB";
 
+
 player addAction["Radio NATO", {
   _PlayerPos = Position Player;
   _RadioStations = true;

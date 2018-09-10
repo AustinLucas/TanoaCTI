@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=236;
+		nextID=261;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=46;
+		nextID=83;
 	};
 	class Camera
 	{
-		pos[]={8945.4844,77.984497,10120.99};
-		dir[]={-0.063450985,-0.9847123,0.16239649};
-		up[]={-0.35835481,0.17429608,0.91717094};
-		aside[]={0.93145663,-2.0220759e-006,0.36393878};
+		pos[]={8872.7939,116.48355,10097.269};
+		dir[]={0.443288,-0.65309757,0.61407346};
+		up[]={0.38229832,0.7572127,0.52958685};
+		aside[]={0.81086135,-1.5943951e-006,-0.5853436};
 	};
 };
 binarizationWanted=0;
@@ -41,7 +41,6 @@ addons[]=
 	"b52_random_vehicles",
 	"A3_Boat_F_Jets_Carrier_01",
 	"ryanzombiesfunctions",
-	"A3_Modules_F",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_explosives"
 };
@@ -49,7 +48,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=13;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -126,19 +125,12 @@ class AddonsMetaData
 		};
 		class Item11
 		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item12
-		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item12
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
@@ -164,8 +156,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -177,7 +169,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -257,8 +249,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -270,7 +262,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -2905,15 +2897,17 @@ class Mission
 			name="Tanouka";
 			class Entities
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
 					dataType="Marker";
-					position[]={8873.8262,18.870867,10203.482};
+					position[]={8873.8262,18.871,10203.482};
 					name="Tanouka";
 					text="Tanouka";
 					type="mil_objective";
+					colorName="ColorRed";
 					id=208;
+					atlOffset=0.0001335144;
 				};
 				class Item1
 				{
@@ -2928,29 +2922,30 @@ class Mission
 							name="Building1";
 							class Entities
 							{
-								items=3;
+								items=2;
 								class Item0
 								{
 									dataType="Marker";
-									position[]={8944.6191,21.47975,10143.361};
-									name="Inf_building_Tanouka_1";
+									position[]={8944.6191,21.48,10143.361};
+									name="Tanouka_Inf_building_1";
 									text="Infected building";
 									type="mil_dot";
+									alpha=0;
 									id=211;
-									atlOffset=6.6757202e-005;
+									atlOffset=0.00026702881;
 								};
 								class Item1
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={8939.0303,21.482773,10143.192};
+										position[]={8941.457,21.481354,10141.094};
 										angles[]={0,0,6.2826962};
 									};
 									name="_ZombieSpawner";
 									id=216;
 									type="RyanZM_ModuleSpawn";
-									atlOffset=0.00036048889;
+									atlOffset=7.8201294e-005;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -3279,22 +3274,9 @@ class Mission
 										nAttributes=17;
 									};
 								};
-								class Item2
-								{
-									dataType="Logic";
-									class PositionInfo
-									{
-										position[]={8946.5078,21.478786,10140.636};
-										angles[]={0,0,6.2826962};
-									};
-									init="call{null = [(nearestObject[this,""Building""]), (synchronizedObjects this)] execVM ""TownSystem\TestScript.sqf""}";
-									id=228;
-									type="Logic";
-									atlOffset=2.6702881e-005;
-								};
 							};
 							id=221;
-							atlOffset=0.00012016296;
+							atlOffset=0.00017356873;
 						};
 						class Item1
 						{
@@ -3306,22 +3288,25 @@ class Mission
 								class Item0
 								{
 									dataType="Marker";
-									position[]={8869.1914,25.717224,10331.38};
-									name="Inf_building_Tanouka_2";
+									position[]={8834.5,26.573,10340.956};
+									name="Tanouka_Inf_building_2";
 									text="Infected building";
 									type="mil_dot";
+									alpha=0;
 									id=212;
+									atlOffset=0.00051498413;
 								};
 								class Item1
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={8869.4424,25.722624,10331.744};
+										position[]={8835.5479,26.572735,10340.429};
 									};
 									name="_ZombieSpawner1";
 									id=215;
 									type="RyanZM_ModuleSpawn";
+									atlOffset=0.00024986267;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -3415,7 +3400,7 @@ class Mission
 															"SCALAR"
 														};
 													};
-													value=100;
+													value=450;
 												};
 											};
 										};
@@ -3652,7 +3637,7 @@ class Mission
 								};
 							};
 							id=222;
-							atlOffset=-3.2424927e-005;
+							atlOffset=0.00038337708;
 						};
 						class Item2
 						{
@@ -3664,22 +3649,26 @@ class Mission
 								class Item0
 								{
 									dataType="Marker";
-									position[]={8793.9951,19.212591,10173.833};
-									name="Inf_building_Tanouka_3";
+									position[]={8687.2969,28.978001,10065.41};
+									name="Tanouka_Inf_building_3";
 									text="Infected building";
 									type="mil_dot";
+									alpha=0;
 									id=213;
+									atlOffset=0.72667122;
 								};
 								class Item1
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={8793.0869,19.191742,10174.19};
+										position[]={8689.207,25.011209,10065.901};
+										angles[]={0,0,6.2824869};
 									};
 									name="_ZombieSpawner2";
 									id=214;
 									type="RyanZM_ModuleSpawn";
+									atlOffset=0.20400047;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -4010,32 +3999,105 @@ class Mission
 								};
 							};
 							id=223;
-							atlOffset=-0.00030326843;
+							atlOffset=1.9826565;
 						};
 					};
 					id=210;
-					atlOffset=2.8155155;
+					atlOffset=6.1293831;
 				};
 				class Item2
 				{
+					dataType="Layer";
+					name="CaptureBuilding";
+					class Entities
+					{
+						items=3;
+						class Item0
+						{
+							dataType="Trigger";
+							position[]={8794.5234,27.995684,10174.855};
+							angle=5.1329608;
+							class Attributes
+							{
+								name="Tanouka_Capture_Trigger_blue";
+								sizeA=13.309;
+								sizeB=17.297001;
+								sizeC=10;
+								repeatable=1;
+								activationBy="WEST";
+								isRectangle=1;
+								isServerOnly=1;
+							};
+							id=255;
+							type="EmptyDetector";
+							atlOffset=6.7809238;
+						};
+						class Item1
+						{
+							dataType="Trigger";
+							position[]={8794.5234,27.995684,10174.855};
+							angle=5.1329608;
+							class Attributes
+							{
+								name="Tanouka_Capture_Trigger_Opfor";
+								sizeA=13.309;
+								sizeB=17.297001;
+								sizeC=10;
+								repeatable=1;
+								activationBy="EAST";
+								isRectangle=1;
+								isServerOnly=1;
+							};
+							id=259;
+							type="EmptyDetector";
+							atlOffset=6.7809238;
+						};
+						class Item2
+						{
+							dataType="Trigger";
+							position[]={8794.5234,27.995684,10174.855};
+							angle=5.1329608;
+							class Attributes
+							{
+								name="Tanouka_Capture_Trigger_Zombies";
+								sizeA=13.309;
+								sizeB=17.297001;
+								sizeC=10;
+								repeatable=1;
+								activationBy="GUER";
+								isRectangle=1;
+								isServerOnly=1;
+							};
+							id=260;
+							type="EmptyDetector";
+							atlOffset=6.7809238;
+						};
+					};
+					id=254;
+					atlOffset=0.1139431;
+				};
+				class Item3
+				{
 					dataType="Trigger";
-					position[]={8873.166,18.620073,10208.348};
+					position[]={8868.7109,18.698069,10208.005};
 					class Attributes
 					{
 						name="Tanouka_Trigger_Blue";
 						condition="call{this}";
+						onActivation="call{null = [thisTrigger]execVM ""TownSystem\TriggerActivation.sqf""}";
 						sizeA=250;
 						sizeB=250;
 						repeatable=1;
 						activationBy="WEST";
 						isServerOnly=1;
 					};
-					id=235;
+					id=238;
 					type="EmptyDetectorAreaR250";
+					atlOffset=1.9073486e-006;
 				};
 			};
 			id=209;
-			atlOffset=0.60071754;
+			atlOffset=3.1899719;
 		};
 		class Item7
 		{
@@ -4059,16 +4121,36 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=1;
+			nextID=3;
 		};
 		class Links
 		{
-			items=1;
+			items=3;
 			class Item0
 			{
 				linkID=0;
-				item0=228;
+				item0=238;
+				item1=214;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=238;
 				item1=216;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=238;
+				item1=215;
 				class CustomData
 				{
 					type="Sync";
