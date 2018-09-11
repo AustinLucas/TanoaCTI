@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=261;
+		nextID=262;
 	};
 	class MarkerIDProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class LayerIndexProvider
 	{
-		nextID=83;
+		nextID=96;
 	};
 	class Camera
 	{
-		pos[]={8872.7939,116.48355,10097.269};
-		dir[]={0.443288,-0.65309757,0.61407346};
-		up[]={0.38229832,0.7572127,0.52958685};
-		aside[]={0.81086135,-1.5943951e-006,-0.5853436};
+		pos[]={8872.502,45.141418,10117.33};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -156,8 +156,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -169,7 +169,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=1;
+					value=2;
 				};
 			};
 		};
@@ -249,8 +249,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -262,7 +262,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -2932,7 +2932,7 @@ class Mission
 									type="mil_dot";
 									alpha=0;
 									id=211;
-									atlOffset=0.00026702881;
+									atlOffset=0.00023651123;
 								};
 								class Item1
 								{
@@ -2942,10 +2942,10 @@ class Mission
 										position[]={8941.457,21.481354,10141.094};
 										angles[]={0,0,6.2826962};
 									};
-									name="_ZombieSpawner";
+									name="_ZombieSpawner_1";
 									id=216;
 									type="RyanZM_ModuleSpawn";
-									atlOffset=7.8201294e-005;
+									atlOffset=4.7683716e-005;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -3276,7 +3276,7 @@ class Mission
 								};
 							};
 							id=221;
-							atlOffset=0.00017356873;
+							atlOffset=0.00014305115;
 						};
 						class Item1
 						{
@@ -3294,7 +3294,7 @@ class Mission
 									type="mil_dot";
 									alpha=0;
 									id=212;
-									atlOffset=0.00051498413;
+									atlOffset=0.00035667419;
 								};
 								class Item1
 								{
@@ -3303,10 +3303,10 @@ class Mission
 									{
 										position[]={8835.5479,26.572735,10340.429};
 									};
-									name="_ZombieSpawner1";
+									name="_ZombieSpawner_2";
 									id=215;
 									type="RyanZM_ModuleSpawn";
-									atlOffset=0.00024986267;
+									atlOffset=9.1552734e-005;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -3637,7 +3637,7 @@ class Mission
 								};
 							};
 							id=222;
-							atlOffset=0.00038337708;
+							atlOffset=0.00022506714;
 						};
 						class Item2
 						{
@@ -3655,7 +3655,7 @@ class Mission
 									type="mil_dot";
 									alpha=0;
 									id=213;
-									atlOffset=0.72667122;
+									atlOffset=0.72667503;
 								};
 								class Item1
 								{
@@ -3665,10 +3665,9 @@ class Mission
 										position[]={8689.207,25.011209,10065.901};
 										angles[]={0,0,6.2824869};
 									};
-									name="_ZombieSpawner2";
+									name="_ZombieSpawner_3";
 									id=214;
 									type="RyanZM_ModuleSpawn";
-									atlOffset=0.20400047;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -3999,7 +3998,7 @@ class Mission
 								};
 							};
 							id=223;
-							atlOffset=1.9826565;
+							atlOffset=1.9826603;
 						};
 					};
 					id=210;
@@ -4011,7 +4010,7 @@ class Mission
 					name="CaptureBuilding";
 					class Entities
 					{
-						items=3;
+						items=4;
 						class Item0
 						{
 							dataType="Trigger";
@@ -4020,6 +4019,8 @@ class Mission
 							class Attributes
 							{
 								name="Tanouka_Capture_Trigger_blue";
+								condition="call{this}";
+								onActivation="call{null = [thisTrigger]execVM ""TownSystem\TriggerActivation.sqf""}";
 								sizeA=13.309;
 								sizeB=17.297001;
 								sizeC=10;
@@ -4039,7 +4040,7 @@ class Mission
 							angle=5.1329608;
 							class Attributes
 							{
-								name="Tanouka_Capture_Trigger_Opfor";
+								name="Tanouka_Capture_Trigger_red";
 								sizeA=13.309;
 								sizeB=17.297001;
 								sizeC=10;
@@ -4059,7 +4060,7 @@ class Mission
 							angle=5.1329608;
 							class Attributes
 							{
-								name="Tanouka_Capture_Trigger_Zombies";
+								name="Tanouka_Capture_Trigger_Green";
 								sizeA=13.309;
 								sizeB=17.297001;
 								sizeC=10;
@@ -4072,9 +4073,19 @@ class Mission
 							type="EmptyDetector";
 							atlOffset=6.7809238;
 						};
+						class Item3
+						{
+							dataType="Marker";
+							position[]={8793.3115,19.211,10173.028};
+							name="Tanouka_Capture";
+							text="Town Hall";
+							type="mil_dot";
+							id=261;
+							atlOffset=-0.00044822693;
+						};
 					};
 					id=254;
-					atlOffset=0.1139431;
+					atlOffset=3.0935688;
 				};
 				class Item3
 				{
@@ -4085,6 +4096,7 @@ class Mission
 						name="Tanouka_Trigger_Blue";
 						condition="call{this}";
 						onActivation="call{null = [thisTrigger]execVM ""TownSystem\TriggerActivation.sqf""}";
+						onDeactivation="call{null = [thisTrigger]execvm ""TownSystem/TriggerDeactivate.sqf""}";
 						sizeA=250;
 						sizeB=250;
 						repeatable=1;
@@ -4097,7 +4109,7 @@ class Mission
 				};
 			};
 			id=209;
-			atlOffset=3.1899719;
+			atlOffset=1.8637676;
 		};
 		class Item7
 		{
